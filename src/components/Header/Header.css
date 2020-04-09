@@ -1,0 +1,67 @@
+/* HEADER  */
+/* BIG  */
+
+header {
+  padding: 20px;
+  background-color: bisque;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items : center;
+  height: 170px;
+}
+
+.header-title {
+  color: black;
+  font-family: "Abril Fatface";
+  font-size: 6rem;
+}
+
+header nav {
+  font-family: "Futura";
+  letter-spacing: 0.2rem;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav span:hover {
+  transition: 0.2s;
+  border-bottom: 3px solid black;
+}
+header nav div {
+  width: 1px;
+  height: 40px;
+  background-color: red;
+  margin: 0 20px;
+}
+
+/* SMALL HEADER */
+
+.header-small-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: bisque; */
+  height: 50px;
+  border-bottom: 1px solid red;
+
+}
+
+.header-title-small {
+  color: black;
+  font-family: "Abril Fatface";
+  font-size: 1.4rem;
+}
+
+
+.header-small-socials {
+  position : fixed;
+  right : 50px;
+  width : 90px;
+}

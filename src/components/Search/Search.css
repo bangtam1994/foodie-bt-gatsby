@@ -1,0 +1,25 @@
+.search-container {
+    height : 50px;
+    width: 100vw;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    width: 200px;
+    height : 30px;
+    background-color: black;
+    color : white;
+border: none;
+padding : 5px 10px;
+font-family:"Futura";
+letter-spacing: 0.1rem;}
+
+.search-input::placeholder{
+    color  : lightgray
+}
+.search-input:focus{
+    outline: none;
+}

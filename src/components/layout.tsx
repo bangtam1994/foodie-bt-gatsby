@@ -8,11 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import NavigationBar from "./navigationBar"
+import Header from "./Header/header"
+import HeaderSmall from "./Header/HeaderSmall"
 
-import Header from "./header"
+import Footer from "./footer"
+import "../reset.css"
 import "./layout.css"
+import SearchBarRecipe from "./Search/SearchBarRecipe"
 
-const Layout = ({ children }) => {
+interface Props {
+  children?: any
+  isLandingPage: boolean
+}
+
+const Layout = ({ children, isLandingPage }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +35,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {isLandingPage ? (
+        <Header siteTitle={data.site.siteMetadata.title} />
+      ) : (
+        <HeaderSmall siteTitle={data.site.siteMetadata.title} />
+      )}
+      {isLandingPage ? <NavigationBar /> : <SearchBarRecipe />}
       <div
         style={{
           margin: `0 auto`,
@@ -34,12 +49,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <Footer />
     </>
   )
 }

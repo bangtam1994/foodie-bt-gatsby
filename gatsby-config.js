@@ -1,20 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `The Foodie BT`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Bang-Tam Nguyen`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-netlify-cms`,
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        plugins: [`gatsby-transformer-sharp`, `gatsby-plugin-sharp`],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `happycow`,
+        path: `${__dirname}/src/data`,
+        plugins: [`gatsby-transformer-json`],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,6 +36,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `bt_ngn`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
