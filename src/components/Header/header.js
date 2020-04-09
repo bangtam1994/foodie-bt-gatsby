@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <div></div>
       <Link
-        to="/happycow"
+        to="/"
         style={{
           color: "black",
           textDecoration: "none",

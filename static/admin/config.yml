@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo : bangtam1994/foodie-bt-gatsby
 
 media_folder: static/assets
 public_folder: assets

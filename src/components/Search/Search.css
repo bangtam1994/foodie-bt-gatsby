@@ -15,7 +15,8 @@
 border: none;
 padding : 5px 10px;
 font-family:"Futura";
-letter-spacing: 0.1rem;}
+letter-spacing: 0.1rem
+}
 
 .search-input::placeholder{
     color  : lightgray

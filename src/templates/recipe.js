@@ -10,7 +10,7 @@ const Recipe = ({ pageContext: { recipe } }) => {
      
 <img src={recipe.image} alt={recipe.name} style={{width : "100%", height : "500px", objectFit:"cover", objectPosition:"center"}} />   
 
-{recipe.recipes.map((recipe, index) => {
+{recipe && recipe.recipes && recipe.recipes.map((recipe, index) => {
   return (
 <div key={index}> 
 
