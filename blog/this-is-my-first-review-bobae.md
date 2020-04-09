@@ -1,7 +1,7 @@
 ---
 path: review/bobae
 date: "2020-04-09T14:45:16.757Z"
-title: "This is my first review : Bobae"
+title: Bobae
 ---
 
 
