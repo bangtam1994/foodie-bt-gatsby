@@ -15,22 +15,31 @@ const Footer = () => {
     <footer
       style={{
         padding: `1rem`,
-        backgroundColor: "bisque",
+        backgroundColor: "#000000",
+        marginTop: "200px",
+        color: "white",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
+        bottom: 0,
       }}
     >
       <div>
         Website made by{" "}
         <a
           href="https://linkedin.com/in/bangtamnguyen"
-          style={{ textDecoration: "none", color: "pink" }}
+          style={{ textDecoration: "none", color: "white" }}
         >
           {data.site.siteMetadata.author}
         </a>
         ©{new Date().getFullYear()}, Built with
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a
+          href="https://www.gatsbyjs.org"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          Gatsby
+        </a>
       </div>
     </footer>
   )

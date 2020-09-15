@@ -7,10 +7,11 @@ import SEO from "../components/seo"
 export default ({ data }) => (
   <Layout>
     <SEO title="About" />
-
-    <h1> About {data.site.siteMetadata.title}</h1>
-    <div className="d-flex">
-      <div>
+    <div style={{ margin: "20px 0px 40px 0px" }}>
+      <h1> About {data.site.siteMetadata.title}</h1>
+    </div>
+    <div className="d-flex alignCenter">
+      <div style={{ marginRight: 30 }}>
         <p>
           This is my first blog about food. Because I love food. I enjoy eating
           at restaurants as much as making my own meals.

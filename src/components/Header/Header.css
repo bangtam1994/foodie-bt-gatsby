@@ -3,11 +3,11 @@
 
 header {
   padding: 20px;
-  background-color: bisque;
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items : center;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 170px;
 }
 
@@ -50,7 +50,6 @@ header nav div {
   /* background-color: bisque; */
   height: 50px;
   border-bottom: 1px solid red;
-
 }
 
 .header-title-small {
@@ -59,9 +58,8 @@ header nav div {
   font-size: 1.4rem;
 }
 
-
 .header-small-socials {
-  position : fixed;
-  right : 50px;
-  width : 90px;
+  position: fixed;
+  right: 50px;
+  width: 90px;
 }

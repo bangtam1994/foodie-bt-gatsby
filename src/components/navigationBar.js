@@ -18,11 +18,11 @@ const NavigationBar = () => {
           width: "90%",
           marginBottom: "10px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <div> Search</div>
+        <div> </div>
         <div className="navigation-bar-left">
           <Link
             to="/about"

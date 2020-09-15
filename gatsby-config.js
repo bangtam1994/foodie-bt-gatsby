@@ -8,8 +8,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-netlify-cms`,
-
-
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,7 +25,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `happycow`,
+        name: `content`,
+        path: `${__dirname}/src/content/posts`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `recipes-iamfoodblog`,
         path: `${__dirname}/src/data`,
         plugins: [`gatsby-transformer-json`],
       },

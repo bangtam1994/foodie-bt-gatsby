@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
     </Link>
     <nav>
       <Link
-        to="/about"
+        to="/restaurants"
         style={{
           color: "black",
           textDecoration: "none",

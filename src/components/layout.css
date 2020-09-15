@@ -27,6 +27,14 @@ h2 {
   display: flex;
 }
 
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
 /* NAVIGATION BAR  */
 
 .navigation-bar span {
@@ -57,9 +65,8 @@ h2 {
 .landing-picture {
   width: 100%;
   object-fit: cover;
+  margin-bottom: 20px;
 }
-
-
 
 @media only screen and (max-width: 480px) {
   html {
