@@ -1,28 +1,21 @@
-
-
 const path = require("path")
 const recipes = require("./src/data/recipes-iamfoodblog.json")
 const slugify = require("slugify")
 
-exports.createPages = async({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-
-
-
-//RECIPES
-const RecipeTemplate = path.resolve(`./src/templates/recipe.js`)
+  //RECIPES
+  const RecipeTemplate = path.resolve(`./src/templates/recipe.js`)
 
   recipes.forEach(recipe => {
-    let nameSlug = slugify(recipe.name, {remove: /[*+~.()'"!:@]/g })
+    let nameSlug = slugify(recipe.name, { remove: /[*+~.()'"!:@]/g })
     createPage({
       path: `/recipe/${nameSlug}`,
       component: RecipeTemplate,
       context: { recipe },
     })
   })
-
-
 
   //REVIEWS
   const blogPostTemplate = path.resolve(`src/templates/review.js`)
@@ -35,7 +28,7 @@ const RecipeTemplate = path.resolve(`./src/templates/recipe.js`)
         edges {
           node {
             frontmatter {
-              path
+              title
             }
           }
         }
@@ -48,13 +41,14 @@ const RecipeTemplate = path.resolve(`./src/templates/recipe.js`)
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    let nameSlug = slugify(node.frontmatter.title, { remove: /[*+~.()'"!:@]/g })
+
     createPage({
-      path: node.frontmatter.path,
+      path: `/restaurants/${nameSlug}`,
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })
   })
-
 }
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
